@@ -1,12 +1,157 @@
 /* Équipe 10: Félix Désilets (20377097), ...*/
 body {
-  background-color: aliceblue;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #FAF6F0;
+  color: #2F2F2F;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #E8DFD0;
+}
+
+.logo {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #C4694F;
+  font-weight: bold;
 }
 
 nav {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2F2F2F;
+}
+
+nav a:hover {
+  color: #C4694F;
+}
+
+nav a.active {
+  color: #C4694F;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+#a-propos {
+  background-color: #8A9A7B;
+  color: #2F2F2F;
+  text-align: center;
+  padding: 20px 0;
+  margin:0;
+  margin-bottom: 0;
+}
+
+#a-propos h4 {
+  margin: 10px auto;
+  color: White;
+  text-decoration: underline;
+}
+
+#a-propos p {
+  max-width: 600px;
+  margin: 10px auto;
+  color: White;
+  font-size: 0.9rem;
+}
+
+.droits {
+  background-color: #E8DFD0;
+  color: #2F2F2F;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+main h2 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.boite {
+  background-color: #e8dfd0;
+  flex:1;
+  padding: 4% 4% 3% 4%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#boites {
+  display: flex;
+  gap: 2%;
+  max-width: 98%;
+  margin: 20px 2%;
+  padding: 20px;
+}
+
+#boites svg {
   text-align: center;
 }
 
-nav>a:hover {
+.boite p {
+  text-align: center;
+  margin: 40px 0 0 0;
+  color: #2F2F2F;
+  opacity: 1;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
   font-weight: bold;
+}
+
+#spacer {
+  background-color:gray;
+  height: 10px;
+  margin: 20px 35%;
+  border-radius: 10px;
+  opacity: 0.3;
+  border: none;
+}
+
+#boite-bouton button {
+  background-color: #C4694F;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  font-family: inherit;
+  font-size: 1.1rem;
+  transition: background-color 0.2s;
+}
+
+#boite-bouton button:hover {
+  background-color: #A0523D;
+  cursor: pointer;
+}
+
+#boite-bouton button:active {
+  background-color: #8B3E2F;
+  transform: translateY(2px);
+}
+
+#boite-bouton {
+  text-align: center;
+  margin: 15px 0;
 }
