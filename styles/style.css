@@ -1,10 +1,17 @@
-/* Équipe 10: Félix Désilets (20377097), ...*/
+/* Équipe 10: Félix Désilets (20377097), Jonathan Audet (20373865) */
+:root {
+  --beige-creme: #FAF6F0;
+  --beige-sable: #E8DFD0;
+  --orange-terracota: #C4694F;
+  --vert-sage: #8A9A7B;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #FAF6F0;
+  background-color: var(--beige-creme);
   color: #2F2F2F;
   font-family: 'Lato', sans-serif;
   line-height: 1.6;
@@ -15,18 +22,24 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
-  border-bottom: 1px solid #E8DFD0;
+  border-bottom: 1px solid var(--beige-sable);
 }
 
-.logo {
+main {
+  flex: 1;
   margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  color: #C4694F;
-  font-weight: bold;
+  font-family: 'Lato', sans-serif;
 }
 
-nav {
+main h2 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+nav { 
   display: flex;
   gap: 40px;
 }
@@ -37,22 +50,96 @@ nav a {
 }
 
 nav a:hover {
-  color: #C4694F;
+  color: var(--orange-terracota);
 }
 
 nav a.active {
-  color: #C4694F;
+  color: var(--orange-terracota);
   font-weight: bold;
 }
 
-main {
-  flex: 1;
+table caption {
+  font-weight: bold;
+}
+
+/* TODO: Passer en flow rangée sur mobile.*/
+@media (max-width: 480px) {
+  .grille {
+    display: grid;
+    column-gap: 64px;
+    grid-auto-flow: row;
+    justify-content: center;
+  }
+}
+
+.grille {
+  display: grid;
+  column-gap: 64px;
+  grid-auto-flow: column;
+  justify-content: center;
+}
+
+.logo {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--orange-terracota);
+  font-weight: bold;
+}
+
+/*.logo::before {
+  content: "Clay & Co. ";
+}*/
+
+.droits {
+  background-color: var(--beige-sable);
+  color: #2F2F2F;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+/*.droits::before {
+  content: "© 2026 Clay & Co. Tout droits réservés.";
+}*/
+
+.rangée {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#spacer {
+  background-color:gray;
+  height: 10px;
+  margin: 20px 35%;
+  border-radius: 10px;
+  opacity: 0.3;
+  border: none;
+}				
+
+/* Accueil */
+.boite {
+  background-color: var(--beige-sable);
+  flex:1;
+  padding: 4% 4% 3% 4%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.boite p {
+  text-align: center;
+  margin: 40px 0 0 0;
+  color: #2F2F2F;
+  opacity: 1;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
 }
 
 #a-propos {
-  background-color: #8A9A7B;
+  background-color: var(--vert-sage);
   color: #2F2F2F;
   text-align: center;
   padding: 20px 0;
@@ -73,31 +160,6 @@ main {
   font-size: 0.9rem;
 }
 
-.droits {
-  background-color: #E8DFD0;
-  color: #2F2F2F;
-  text-align: center;
-  padding: 10px;
-  font-size: 0.9rem;
-  margin-top: 0;
-}
-
-main h2 {
-  text-align: center;
-  margin-top: 0;
-  font-size: 1.8rem;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 10px;
-}
-
-.boite {
-  background-color: #e8dfd0;
-  flex:1;
-  padding: 4% 4% 3% 4%;
-  text-align: center;
-  border-radius: 10px;
-}
-
 #boites {
   display: flex;
   gap: 2%;
@@ -110,27 +172,13 @@ main h2 {
   text-align: center;
 }
 
-.boite p {
+#boite-bouton {
   text-align: center;
-  margin: 40px 0 0 0;
-  color: #2F2F2F;
-  opacity: 1;
-  font-size: 1.5rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
-}
-
-#spacer {
-  background-color:gray;
-  height: 10px;
-  margin: 20px 35%;
-  border-radius: 10px;
-  opacity: 0.3;
-  border: none;
+  margin: 15px 0;
 }
 
 #boite-bouton button {
-  background-color: #C4694F;
+  background-color: var(--orange-terracota);
   color: white;
   padding: 15px 20px;
   border-radius: 5px;
@@ -151,7 +199,30 @@ main h2 {
   transform: translateY(2px);
 }
 
-#boite-bouton {
+/* Boutique */
+.boutique-paragraphe {
+  height: max-content;
+  width: min-content;
+  min-width: 20vw;
+}
+
+.page-boutique h1 {
   text-align: center;
-  margin: 15px 0;
+  margin-top: 0;
+  font-size: 2.4rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.page-boutique main {
+  justify-content: center;
+  margin: 0 20%;
+}
+
+.page-boutique main a {
+  color: var(--orange-terracota);
+}
+
+.page-boutique main a:hover {
+  color: #8B3E2F;
 }

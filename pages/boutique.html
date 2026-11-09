@@ -1,4 +1,5 @@
-<!-- Équipe 10: Félix Désilets (20377097), ... -->
+<!-- Équipe 10: Félix Désilets (20377097), Jonathan Audet (20373865) -->
+ <!--TODO Ajouter un SVG avec une animation.-->
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -7,7 +8,7 @@
 		<title>Boutique</title>
 	</head>
 
-	<body>
+	<body class="page-boutique">
 		<header>
 			<div class="logo">Clay &amp; Co. </div>
 			<nav>
@@ -19,11 +20,88 @@
 		</header>
 
 		<main>
-			
+			<h1>Boutique</h1>
+			<hr id="spacer">
+
+			<section>
+				<h2>Informations pratiques</h2>
+				<div class="rangée">
+					<p class="boutique-paragraphe">
+						Venez découvrir nos produits le <time datetime="11-07">7</time> et le <time datetime="11-08">8</time> Novembre
+						au marché Créafolie situé 1801 Rue Notre Dame dans la ville de L'Ancienne-Lorette, QC G2E 3C6.
+					</p>
+
+					<table>
+						<caption>Horaire</caption>
+							<tr>
+								<th>Dimanche</th>
+								<td><time datetime="8:00">8h</time> - <time datetime="12:00">12h</time></td>
+							</tr>
+							<tr>
+								<th>Lundi</th>
+								<td><time datetime="10:00">10h</time> - <time datetime="18:00">18h</time></td>
+							</tr>	
+							<tr>
+								<th>Mardi</th>
+								<td><time datetime="10:00">10h</time> - <time datetime="18:00">18h</time></td>
+							</tr>	
+							<tr>
+								<th>Mercredi</th>
+								<td><time datetime="10:00">10h</time> - <time datetime="18:00">18h</time></td>
+							</tr>	
+							<tr>
+								<th>Jeudi</th>
+								<td><time datetime="10:00">10h</time> - <time datetime="18:00">18h</time></td>
+							</tr>
+							<tr>
+								<th>Vendredi</th>
+								<td><time datetime="8:00">8h</time> - <time datetime="16:00">16h</time></td>
+							</tr>
+							<tr>
+								<th>Samedi</th>
+								<td><time datetime="8:00">8h</time> - <time datetime="12:00">12h</time></td>
+							</tr>
+					</table>
+				</div>
+			</section>
+
+			<section>
+				<h2>Contact</h2>
+				<p>Vous pouvez nous contacter en appelant au <a href="tel:5141234567">514-123-4567</a> durant nos heures d'ouverture ou
+					en nous écrivant par courriel à notre adresse: <a href="mailto:clayco@mail.com">clayco@mail.com</a>.
+				</p>
+			</section>
+
+			<section>
+				<h2>Nos partenaires</h2>
+				<!-- TODO: Trouver des sites pertinent avec des logos SVG.-->
+					<div class="grille">
+						<div class="partenaire">
+							<a href="">
+								<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150">
+									<circle cx="75" cy="75" r="70" stroke="var(--orange-terracota)" fill="var(--beige-sable)" stroke-width="5" />
+								</svg>
+							</a>
+							<p>NOM</p>
+							<p>Description</p>
+						</div>
+
+						<div class="partenaire">
+							<a href="">
+								<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150">
+									<circle cx="75" cy="75" r="70" stroke="var(--orange-terracota)" fill="var(--beige-sable)" stroke-width="5" />
+								</svg>
+							</a>
+							<p>Nom</p>
+							<p>Description</p>
+						</div>
+
+					</div>
+			</section>
 		</main>
 
-		<footer>
-
+		<footer class="droits">
+			<p> &copy; 2026 Clay &amp; Co. Tout droits réservés.</p>
 		</footer>
 	</body>
 </html>
